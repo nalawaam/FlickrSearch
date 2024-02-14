@@ -32,7 +32,7 @@ struct ImageDetailView: View {
                     .padding(.leading)
                 Text(imageModel.description)
                     .accessibilityLabel("Image description in detail view")
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                     .font(.callout)
                     .padding()
                 
@@ -67,11 +67,11 @@ struct ImageDetailView_Previews: PreviewProvider {
                 title: "Short Eared Owl",
                 link: "",
                 media: ["m": "https://live.staticflickr.com//65535//53524670420_b6f8a08185_m.jpg"],
-                date_taken: "",
+                dateTaken: "",
                 description: "formatted description",
                 published: "2024-02-11T20:26:59Z",
                 author: "nobody@flickr.com (\"antonfalco2\")",
-                author_id: "",
+                authorId: "",
                 tags: ""
             )
         )

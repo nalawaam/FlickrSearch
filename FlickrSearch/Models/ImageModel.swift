@@ -22,12 +22,24 @@ struct ImageModel: Codable, Identifiable {
     let title: String
     let link: String
     let media: [String: String]
-    let date_taken: String
+    let dateTaken: String
     let description: String
     let published: String
     let author: String
-    let author_id: String
+    let authorId: String
     let tags: String
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case link
+        case media
+        case dateTaken = "date_taken"
+        case description
+        case published
+        case author
+        case authorId = "author_id"
+        case tags
+    }
 }
 
 // Helper to build url from link in the response.
