@@ -29,7 +29,11 @@ struct ImageSearchView: View {
                 .searchable(text: $searchInput, prompt: "Start typing to search")
                 .onChange(of: searchInput) { newValue in
                     Task {
-                        try? await imageSearchViewModel.search(for: newValue)
+                        do {
+                            try await imageSearchViewModel.search(for: newValue)
+                        } catch {
+                            // Update UI to represent error state
+                        }
                     }
                 }
             }

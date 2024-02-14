@@ -11,7 +11,7 @@ struct ImageContainerView: View {
     let url: URL?
     
     var body: some View {
-        AsyncImage(url: url, transaction: .init(animation: .easeInOut)) { phase in
+        AsyncImage(url: url) { phase in
             switch phase {
             case .empty:
                 ProgressView()
